@@ -13,7 +13,7 @@ function App () {
 
 			<ul>
 				<li>
-					<button onClick={displayEmojiName}}>
+					<button onClick={displayEmojiName}>
 						<span role='img' aria-label='grinning face' id='grinning face'>
 							😀
 						</span>
