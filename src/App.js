@@ -5,6 +5,21 @@ const displayEmojiName = (event) => alert(event.target.id);
 
 function App () {
 	const greeting = 'greeting';
+
+	const emojis = [
+		{
+			emoji: '😀',
+			name: 'grinning face'
+		},
+		{
+			emoji: '🎉',
+			name: 'party popper'
+		},
+		{
+			emoji: '💃',
+			name: 'woman dancing'
+		}
+	];
 	return (
 		// In order to return multiple elements in JSX we must nest them within one singular element
 		<div className='container'>
@@ -12,29 +27,15 @@ function App () {
 			<p>I am writing JSX</p>
 
 			<ul>
-				<li>
-					<button onClick={displayEmojiName}>
-						<span role='img' aria-label='grinning face' id='grinning face'>
-							😀
-						</span>
-					</button>
-				</li>
-
-				<li>
-					<button onClick={displayEmojiName}>
-						<span role='img' aria-label='party popper' id='party popper'>
-							🎉
-						</span>
-					</button>
-				</li>
-
-				<li>
-					<button onClick={displayEmojiName}>
-						<span role='img' aria-label='woman dancing' id='woman dancing'>
-							💃
-						</span>
-					</button>
-				</li>
+				{emojis.map((emoji) => (
+					<li key={emoji.name}>
+						<button onClick={displayEmojiName}>
+							<span role='img' aria-label={emoji.name} id={emoji.name}>
+								{emoji.emoji}
+							</span>
+						</button>
+					</li>
+				))}
 			</ul>
 		</div>
 	);
