@@ -11,7 +11,7 @@ function App () {
 
 			<ul>
 				<li>
-					<button>
+					<button onClick={(event) => alert(event.target.id)}>
 						<span role='img' aria-label='grinning face' id='grinning face'>
 							😀
 						</span>
@@ -19,7 +19,7 @@ function App () {
 				</li>
 
 				<li>
-					<button>
+					<button onClick={(event) => alert(event.target.id)}>
 						<span role='img' aria-label='party popper' id='party popper'>
 							🎉
 						</span>
@@ -27,7 +27,7 @@ function App () {
 				</li>
 
 				<li>
-					<button>
+					<button onClick={(event) => alert(event.target.id)}>
 						<span role='img' aria-label='woman dancing' id='woman dancing'>
 							💃
 						</span>
