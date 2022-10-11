@@ -3,28 +3,31 @@ import React from 'react';
 
 const displayEmojiName = (event) => alert(event.target.id);
 
-function App () {
+const emojis = [
+	{
+		emoji: '😀',
+		name: 'grinning face'
+	},
+	{
+		emoji: '🎉',
+		name: 'party popper'
+	},
+	{
+		emoji: '💃',
+		name: 'woman dancing'
+	}
+];
+
+function App (props) {
 	const greeting = 'greeting';
 
-	const emojis = [
-		{
-			emoji: '😀',
-			name: 'grinning face'
-		},
-		{
-			emoji: '🎉',
-			name: 'party popper'
-		},
-		{
-			emoji: '💃',
-			name: 'woman dancing'
-		}
-	];
+	const displayAction = true;
+
 	return (
 		// In order to return multiple elements in JSX we must nest them within one singular element
 		<div className='container'>
 			<h1 id={greeting}>Hello, World</h1>
-			<p>I am writing JSX</p>
+			{displayAction && <p>I am writing JSX</p>}
 
 			<ul>
 				{emojis.map((emoji) => (
